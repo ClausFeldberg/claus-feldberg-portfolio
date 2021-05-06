@@ -26,7 +26,7 @@
             </div>
               <div class="icon-container">
                 <i class="far flex-ico fa-object-ungroup"></i>
-                  <p class="section-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil in culpa deleniti ipsam. </p>
+                  <p class="section-text">hashfjaskjasbi </p>
             </div>
         </div>
       </div>
