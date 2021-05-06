@@ -62,9 +62,7 @@
                     </p>
                 </div>
             </div>
-
- <div class="whitespace">
-
+            <div class="whitespace">
             </div>
         </div>
         
@@ -174,7 +172,7 @@
     margin-left: 0rem;
     }
 
-    @media all and (max-width: 600px) {
+      @media (max-width: 600px) {
         #my-works{
             height: auto;
         }
@@ -183,21 +181,22 @@
             height:5px;
         }
 
-        .my_works_wrapper{
+        .art_work_wrapper{
             width:100%;
             height:100%;
+            padding: 2rem;
             display: flex;
             justify-content:flex-start;
             align-items: center;
             flex-direction: column;
         }
 
-        .album_cover_wrapper{
+        .art-work{
             flex-direction: column;
             height:25%;
         }
 
-        .album_cover_wrapper:nth-child(3n) {
+        .art_work:nth-child(3n) {
             flex-direction: column;
         }
 
@@ -220,9 +219,7 @@
         }
 
         h2{
-            color: white;
-            font-family: 'Poppins', sans-serif;
-            margin-top: 2px;
+                  font-size: 24px;
         }
 
     }

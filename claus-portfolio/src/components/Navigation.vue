@@ -5,32 +5,24 @@
                 inverted-scroll="true"
                 height="70"
                 fixed="true"
-                flat="false"
+                flat="true"
                 class="app-bar-wrapper"
-                elevate-on-scroll= "true"
         >
             <div class="app-bar-control">
                 <i class="fas fa-bars hamburger" @click="drawer = true"></i>
-                <!-- <img class="logo_wrapper "  src="../assets/icons/Json-logo.svg"  alt=""> -->
             </div>
         </v-app-bar>
-
         <v-navigation-drawer
                 mobile-break-point="480"
                 v-model="drawer"
                 app="true"
                 temporary
-                color="#0049FF"
-                height="800"
-                width="400"
+                color="transparent"
+                height="100%"
+                width="450"
         >
 
         <div class="nav-drawer">
-
-            <!-- <div class="logo_banner">
-                <img class="logo_wrapper2"  src="../assets/icons/Json-logo2.svg"  alt="">
-            </div> -->
-
             <div class="nav-container">
                 <li
                         class="shuffle"
@@ -38,29 +30,22 @@
                         v-bind:key="index"
                 >
             <div class="hit_box">
-
-                <a :href="link.path">
-
-                  <span class="top">
+            <a :href="link.path">
+                <span class="top">
                     <span>{{ link.name }}</span>
-                  </span>
-                  <span class="bottom">
+                </span>
+                <span class="bottom">
                     <span>{{ link.name }}</span>
-                  </span>
-                </a>
-
-
-
+                </span>
+            </a>
             </div>
                 </li>
-
             </div>
-
             <div class="social-links">
-                <a href="https://open.spotify.com/artist/7jGExbES4WgzpAEABOzExn?si=O_MUUByGTaistRqFBMYFZw&fbclid=IwAR20TkqHF8cjNZKZUVC8WCDMoZct6_R7PdFEwpzT32XrxGpu7-UPQJO-_7w"><i class="fab fa-spotify" ></i></a>
-                <a href="https://www.youtube.com/channel/UCPE5eGtUK832qKP5IJ9smGg"><i class="fab fa-youtube"></i></a>
-                <a href=""><i class="fab fa-linkedin"></i></a>
-                <a href="https://www.instagram.com/jasonraider/"><i class="fab fa-instagram"></i></a>
+                <a class="social-ico" href=""><i class="fab fa-spotify" ></i></a>
+                <a class="social-ico" href=""><i class="fab fa-youtube"></i></a>
+                <a class="social-ico" href=""><i class="fab fa-linkedin"></i></a>
+                <a class="social-ico" href=""><i class="fab fa-instagram"></i></a>
             </div>
 
         </div>
@@ -80,9 +65,9 @@
                 drawer: false,
                 navLinks: [
                     { name: "HOME", path: "/" },
-                    { name: "ABOUT", path: "/#about" },
+                    { name: "ABOUT", path: "/#about-me" },
                     { name: "WORKS", path: "/#my-works" },
-                    { name: "CONTACT", path: "/#contact" },
+                    { name: "CONTACT", path: "/#footer" },
                 ],
             }
         },
@@ -178,30 +163,17 @@
     .nav-drawer{
         width:100%;
         height:100%;
+        background-image: url("../assets/graphics/spray.jpeg");
+        background-size: cover;
         display: flex;
         flex-direction: column;
         align-items:center;
 
     }
 
-    .logo_banner{
-        width: 100%;
-        height:17%;
-        display: flex;
-        justify-content: center;
-        align-items:flex-end;
-    }
-
-
-
-    .logo_wrapper2{
-        width:120px;
-        height: 120px;
-    }
-
     .nav-container{
         width:100%;
-        height:70%;
+        height:100%;
         flex-direction: column;
         align-items: center;
         display: flex;
@@ -209,27 +181,16 @@
     }
 
     .hit_box{
-        width:350px;
+        width:100%;
         height: 100px;
+        background:rgba(0,0,0,0.4);
         display: flex;
+        margin-bottom: 0.5rem;
+        border-radius: 10px;
         justify-content: center;
         align-items: center;
         background-color:black;
     }
-
-    a:hover::after{
-        transform: translate3d(-50%, -50%, 0);
-    }
-
-    a:hover .top{
-        transform: translate3d(5%, 0, 0);
-    }
-
-
-    a:hover .bottom{
-        transform: translate3d(-5%, 0, 0);
-    }
-
 
     .hit_box:hover {
         -webkit-transform: scale(1.1);
@@ -247,43 +208,50 @@
     a{
         text-decoration: none;
         font-size: 50px;
-        font-family: 'Poppins', sans-serif;
+        font-family: 'Antonio', sans-serif;
+        font-family: 'Bebas Neue', cursive;
         font-weight: 700;
         color: #ffffff !important;
     }
 
     .social-links{
-        width:85%;
+        width:80%;
         height:20%;
         display: flex;
-        justify-content:space-around;
-        align-items:flex-start;
+        justify-content:space-between;
+        align-items:center;
+        text-decoration: none;
     }
 
-    .fab{
-        color: black;
-        font-size: 50px;
+    .social-ico {
+        color:  #F6F4F2;
+        font-size: 2rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: all 0.2s;
+        width: 3.5rem;
+        height: 3.5rem;
+        padding: 0;
+        margin: 0;
+        border-radius:10px;
+        background-color: black;
     }
 
-    .fab:hover{
-        -webkit-transform: scale(1.1);
-        -ms-transform: scale(1.1);
+    .social-ico:hover{
         transform: scale(1.1);
-        transition: all 0.5ms ease-out 10ms;
+        background-color: #F6F4F2;
+        color: black;
+    }
+
+    .social-ico:hover > .fab{
+        transform: scale(1.1);
+        background-color: #F6F4F2;
+        color: black;
     }
 
 
-    @media (max-width: 480px) {
-
-        .logo_banner{
-            height:5%;
-            align-items: center;
-        }
-
-        .logo_wrapper2{
-            width: 50px;
-        }
-
+    @media (max-width: 600px) {
 
         .fab{
             font-size:30px;
@@ -296,11 +264,13 @@
         .nav-drawer{
             justify-content:center;
             width:100%;
-            height:70%;
+            height:100%;
         }
 
         .hit_box{
-            width:300px;
+            width:100%;
+            margin: 0;
+            padding: 0;
             height: 60px;
         }
     }

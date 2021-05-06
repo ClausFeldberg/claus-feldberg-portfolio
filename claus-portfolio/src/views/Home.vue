@@ -11,7 +11,7 @@
             </div>
           </div>
       </div>
-       <div class="video_wrapper">
+       <div id="about-me" class="video_wrapper">
           <iframe  id="myVideo" width="560" height="315" src="https://www.youtube.com/embed/tZ7OPH0PZfE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
       </div>
       <div class="second-section">
@@ -41,16 +41,11 @@
         </div>
       </v-parallax>
       <MyWorks></MyWorks>
-      <!-- <div class="third-section">
-         <div class="left-side-wrapper">
-             <h2 class="section-heading">Lorem ipsum</h2>
-             <p class="section-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil in culpa deleniti ipsam. Magnam earum officiis at quos veniam dicta porro nulla amet quibusdam? Aliquid facere cum cupiditate earum neque.</p>
-         </div>
-         <div class="right-side-wrapper">
-
-         </div>
-      </div> -->
-    <v-carousel :show-arrows="true">
+      <div class="my-photos-wrapper">
+          <i class="fas camera-ico fa-camera-retro"></i>
+          <span class="my-photos-banner"> My photos </span>
+      </div>
+    <v-carousel height="700" :show-arrows="true">
       <v-carousel-item
         v-for="(item,i) in items"
         :key="i"
@@ -85,6 +80,15 @@ import MyWorks from "../components/MyWorks"
                     },
                     {
                         src: require ('../assets/pics/havn.jpg'),
+                    },
+                    {
+                        src: require ('../assets/pics/homies.jpeg'),
+                    },
+                    {
+                        src: require ('../assets/pics/river.jpeg'),
+                    },
+                    {
+                        src: require ('../assets/pics/sea.jpeg'),
                     },
                 ],
             }
@@ -137,6 +141,33 @@ import MyWorks from "../components/MyWorks"
     padding: 2rem;
     height: auto;
     justify-content: flex-start;
+  }
+
+  .my-photos-wrapper {
+    width: 100%;
+    height: 40vh;
+    background-color: #0049FF;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    padding-bottom: 3rem;
+  }
+
+  .camera-ico {
+    color:#141824;
+    font-size: 4.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .my-photos-banner {
+     font-family: 'Antonio', sans-serif;
+    font-family: 'Bebas Neue', cursive;
+    font-size: 3.5rem;
+    padding: 0;
+    color: whitesmoke;
+    margin: 0;
+    margin-left: 0rem;
   }
 
   .header-heading {
@@ -266,7 +297,64 @@ import MyWorks from "../components/MyWorks"
         height:100%;
     }
 
-  @media all and (min-width: 120rem) { 
+    @media (max-width: 600px) {
+      .first-section-wrapper {
+        width: 100%;
+        text-align: center;
+      } 
+        .header-wrapper {
+          height: auto;
+          padding: 2rem;
+          flex-direction: column;
+      }
+
+      .parallax-wrapper {
+        width: 100%;
+      }
+
+      .icon-container {
+        width: 100%;
+        margin-bottom: 2rem;
+      }
+
+       .header-heading {
+    font-family: 'Antonio', sans-serif;
+    font-family: 'Bebas Neue', cursive;
+    font-size: 4.5rem;
+    padding: 0;
+    color: #141824;
+    margin: 0;
+  }
+
+  .icons-wrapper {
+    flex-direction: column; 
+    height: auto;
+      width: 100%;
+  }
+
+    .second-section {
+      height: auto;
+      width: 100%;
+      padding: 1rem;
+  }
+
+  .mini-me-banner {
+    margin-top: 2rem;
+    width: 9rem;
+  }
+
+  
+
+    .heading-text-banner {
+    background-color: #F6F4F2;
+    width: 100%;
+    justify-content: flex-start;
+    box-shadow: none;
+  }
+ 
+ }
+
+  @media (min-width: 120rem) { 
     .container {
       width: 1400px;
     }

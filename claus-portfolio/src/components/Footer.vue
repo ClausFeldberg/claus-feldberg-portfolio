@@ -1,5 +1,5 @@
 <template>
-  <div class="container"> 
+  <div id="footer" class="container"> 
       <div class="socials-wrapper">
           <div class="socials-container">
             <i class="fab fa-facebook-square"></i>
@@ -127,4 +127,10 @@
         opacity: 0.6;
         font-family: 'Bebas Neue', cursive;
     }
+
+          @media (max-width: 600px) { 
+              .contact-banner {
+                  display: none;
+              }
+          }
 </style>
