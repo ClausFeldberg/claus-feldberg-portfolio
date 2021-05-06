@@ -6,42 +6,42 @@
           </div>
           <div class="heading-text-banner">
             <div class="text-wrapper">
-              <h1 class="header-heading">Claus Feldberg</h1>
-              <h1 class="header-heading">Portfolio.</h1>
+              <span class="header-heading">Claus Feldberg</span>
+              <span class="header-heading">Portfolio.</span>
             </div>
           </div>
+      </div>
+       <div class="video_wrapper">
+          <iframe  id="myVideo" width="560" height="315" src="https://www.youtube.com/embed/tZ7OPH0PZfE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+      <div class="second-section">
+        <div class="icons-wrapper">
+            <div class="icon-container">
+                <i class="fas flex-ico fa-handshake"></i>
+                  <p class="section-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil in culpa deleniti ipsam. </p>
+            </div>
+              <div class="icon-container">
+                <i class="fas fa-grin-hearts flex-ico "></i>
+                  <p class="section-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil in culpa deleniti ipsam.</p>
+            </div>
+              <div class="icon-container">
+                <i class="far flex-ico fa-object-ungroup"></i>
+                  <p class="section-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil in culpa deleniti ipsam. </p>
+            </div>
+        </div>
       </div>
       <v-parallax height="750" src="../assets/pics/miig.jpg">
         <div class="parallax-wrapper">
           <div class="first-section-wrapper">
             <h2 class="section-heading">Lorem ipsum</h2>
+            <div class="circular-banner">
+            </div>
             <p class="section-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil in culpa deleniti ipsam. Magnam earum officiis at quos veniam dicta porro nulla amet quibusdam? Aliquid facere cum cupiditate earum neque.</p>
         </div>
         </div>
       </v-parallax>
-      <div class="second-section">
-          <div class="icons-wrapper">
-              <div class="icon-container">
-                  <i class="fas flex-ico fa-handshake"></i>
-                   <p class="section-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil in culpa deleniti ipsam. </p>
-              </div>
-               <div class="icon-container">
-                  <i class="fas fa-grin-hearts flex-ico "></i>
-                   <p class="section-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil in culpa deleniti ipsam.</p>
-              </div>
-               <div class="icon-container">
-                  <i class="far flex-ico fa-object-ungroup"></i>
-                   <p class="section-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil in culpa deleniti ipsam. </p>
-              </div>
-          </div>
-          <!-- <div class="triangular-shaper">
-
-          </div> -->
-      </div>
-      <div class="video_wrapper">
-          <iframe  id="myVideo" width="560" height="315" src="https://www.youtube.com/embed/tZ7OPH0PZfE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-      </div>
-      <div class="third-section">
+      <MyWorks></MyWorks>
+      <!-- <div class="third-section">
          <div class="left-side-wrapper">
              <h2 class="section-heading">Lorem ipsum</h2>
              <p class="section-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil in culpa deleniti ipsam. Magnam earum officiis at quos veniam dicta porro nulla amet quibusdam? Aliquid facere cum cupiditate earum neque.</p>
@@ -49,19 +49,46 @@
          <div class="right-side-wrapper">
 
          </div>
-      </div>
+      </div> -->
+    <v-carousel :show-arrows="true">
+      <v-carousel-item
+        v-for="(item,i) in items"
+        :key="i"
+        :src="item.src"
+      ></v-carousel-item>
+    </v-carousel>
   </div>
 </template>
 
 <script>
-
+import MyWorks from "../components/MyWorks"
 
   export default {
     name: 'Home',
 
-    components: {
-     
-    },
+      components: {
+            MyWorks
+        },
+
+        data () {
+            return {
+                drawer: false,
+                items: [
+                    {
+                        src: require ('../assets/pics/fish-eye.jpg'),
+                    },
+                    {
+                        src: require ('../assets/pics/skate-pa-havn.jpg'),
+                    },
+                    {
+                        src: require ('../assets/pics/land-scape.jpg'),
+                    },
+                    {
+                        src: require ('../assets/pics/havn.jpg'),
+                    },
+                ],
+            }
+        },
   }
 </script>
 
@@ -71,7 +98,6 @@
     height: auto;
     display: flex;
     flex-direction: column;
-
     perspective: 1px;
     transform-style: preserve-3d;
     overflow-y: scroll;
@@ -105,6 +131,9 @@
     display: flex;
     align-items: center;
     background-color: #141824;
+    border-bottom-left-radius: 5px;
+    border-top-left-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
     padding: 2rem;
     height: auto;
     justify-content: flex-start;
@@ -118,6 +147,14 @@
     color: #F6F4F2;
     margin: 0;
     margin-left: 3rem;
+  }
+
+  .circular-banner {
+    width: 1.5rem;
+    height: 1.5rem;
+    background-color: #0049FF;
+    border-radius: 25px;
+    margin-bottom: 1.5rem;
   }
 
   .text-wrapper {
@@ -147,12 +184,15 @@
     width: 45%;
     padding: 5rem;
     height: auto;
-    text-align: center;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
     border-radius: 10px;
   }
 
   .section-heading {
-     font-family: 'Antonio', sans-serif;
+    font-family: 'Antonio', sans-serif;
     font-family: 'Bebas Neue', cursive;
     font-size: 3.5rem;
     padding: 0;
@@ -214,17 +254,21 @@
   
     .video_wrapper{
         width:100%;
-        height:100vh;
-        background-color: #e80002;
+        height:90vh;
+        background-color: #F6F4F2;
         display: flex;
-        align-items: center;
+        align-items: flex-end;
         justify-content: center;
     }
 
     #myVideo{
-        width:55%;
+        width:100%;
         height:100%;
     }
 
-
+  @media all and (min-width: 120rem) { 
+    .container {
+      width: 1400px;
+    }
+ }
 </style>

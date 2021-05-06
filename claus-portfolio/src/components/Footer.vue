@@ -7,14 +7,18 @@
             <i class="fab fa-instagram"></i>
             <i class="fab fa-youtube"></i>
           </div>
-            <div class="contact-banner">
+          <div class="contact-banner">
             <div class="contact-item">
-                <i class="fas fa-phone"></i>
-                <span>+45 897 452 721</span>
+                <i class="fas contact-ico fa-phone"></i>
+                <span class="contact-value">+45 897 452 721</span>
             </div>
-                <div class="contact-item">
-                <i class="fas fa-envelope-open"></i>
-                <span>claus@gmail.com</span>
+            <div class="contact-item">
+                <i class="fas contact-ico fa-envelope-open"></i>
+                <span class="contact-value">claus@gmail.com</span>
+            </div>
+            <div class="contact-item">
+                <i class="fab contact-ico fa-linkedin-in"></i>
+                <span class="contact-value">Claus Feldberg</span>
             </div>
         </div>
       </div>
@@ -39,7 +43,7 @@
     };
 </script>
 
-<style lang="scss" >
+<style scoped >
     .container {
         width: 100%;
         height: auto;
@@ -68,6 +72,16 @@
         background:rgba(0,0,0,0.95);
     }
 
+    .contact-item {
+        margin-right: 1.5rem;
+        transition: 0.2s ease;
+        cursor: pointer;
+    }
+
+     .contact-item:hover {
+        opacity: 0.7;
+    }
+
     .fab {
          color: whitesmoke;
         opacity: 0.8;
@@ -77,6 +91,8 @@
 
     .contact-banner {
         display: flex;
+        width: auto;
+        padding: 1rem;
     }
 
     .socials-container {
@@ -90,6 +106,22 @@
         padding: 0;
         margin: 0;
         font-size: 0.9rem;
+        font-family: 'Antonio', sans-serif;
+        color: whitesmoke;
+        opacity: 0.6;
+        font-family: 'Bebas Neue', cursive;
+    }
+
+    .contact-ico{
+        color: aliceblue;
+        margin-right: 0.5rem;
+        font-size: 1.5rem;
+    }
+
+    .contact-value{
+        padding: 0;
+        margin: 0;
+        font-size: 1rem;
         font-family: 'Antonio', sans-serif;
         color: whitesmoke;
         opacity: 0.6;
