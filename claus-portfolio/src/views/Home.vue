@@ -26,17 +26,17 @@
             </div>
               <div class="icon-container">
                 <i class="far flex-ico fa-object-ungroup"></i>
-                  <p class="section-text">hashfjaskjasbi </p>
+                  <p class="section-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil in culpa deleniti ipsam. </p>
             </div>
         </div>
       </div>
       <v-parallax height="750" src="../assets/pics/miig.jpg">
         <div class="parallax-wrapper">
           <div class="first-section-wrapper">
-            <h2 class="section-heading">Lorem ipsum</h2>
+            <h2 class="section-heading">Velkommen! </h2>
             <div class="circular-banner">
             </div>
-            <p class="section-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil in culpa deleniti ipsam. Magnam earum officiis at quos veniam dicta porro nulla amet quibusdam? Aliquid facere cum cupiditate earum neque.</p>
+            <p class="section-text">Mit navn er Claus Feldberg, jeg er 26 år, bor i Esbjerg og studere multimediedesigner på Ervhevsakademiet sydvest .</p>
         </div>
         </div>
       </v-parallax>

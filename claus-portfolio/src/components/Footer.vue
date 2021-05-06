@@ -10,7 +10,7 @@
           <div class="contact-banner">
             <div class="contact-item">
                 <i class="fas contact-ico fa-phone"></i>
-                <span class="contact-value">+45 897 452 721</span>
+                <span class="contact-value">+45 30 25 44 61</span>
             </div>
             <div class="contact-item">
                 <i class="fas contact-ico fa-envelope-open"></i>

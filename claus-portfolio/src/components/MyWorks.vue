@@ -7,14 +7,9 @@
                     <img class="pic" src="../assets/graphics/idehuset logo.svg" alt="">
                 </div>
                 <div class="text_control">
-                    <h1>Good Shit here</h1>
+                    <h1>logoer</h1>
                     <p>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                        Accusantium autem cum cupiditate dolores ducimus ea enim ipsum, rerum! Ab accusamus.
-                    </p>
-                    <h2>Stuff1</h2>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta optio, velit rem sit repellat incidunt doloremque, omnis quibusdam consequatur, eligendi nobis. Corrupti ullam rem corporis quisquam, repellat fugiat veritatis blanditiis!
+                        Jeg kan har lavet logoer i adobe illustrator siden jeg startede som skiltetekniker.
                     </p>
                 </div>
             </div>
@@ -25,14 +20,13 @@
                     <img class="pic" src="../assets/graphics/Esp.png" alt="">
                 </div>
                 <div class="text_control odd">
-                    <h1>Here Here</h1>
+                    <h1>idea house</h1>
                     <p>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                        Accusantium autem cum cupiditate dolores ducimus ea enim ipsum, rerum! Ab accusamus.
+                        Dette logo er lavet i forbindelse med en 1. semester opgave.
                     </p>
-                    <h2>SKILLS</h2>
+                    <h2>Esbyeah skate posse</h2>
                     <p>
-                      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo vero facere neque hic accusamus tenetur tempore at saepe, beatae nam magni, nesciunt odit esse repellendus! Qui unde molestiae quos tempore.
+                      Esbyaeh skate posse er mit eget værk som et outlet til mine skateboard videoer af mig og mine venner.
                     </p>
                 </div>
             </div>
@@ -50,15 +44,9 @@
                     <img class="pic-mini" src="../assets/graphics/mini me.png" alt="">
                 </div>
                 <div class="text_control">
-                    <h1>Heher h1h1</h1>
+                    <h1>Illustrationer</h1>
                     <p>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                        Accusantium autem cum cupiditate dolores ducimus ea enim ipsum, rerum! Ab accusamus.
-                    </p>
-                    <h2>HEADING NUMBA 2</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus alias, architecto commodi,
-                        delectus dignissimos doloribus eaque eius
-                        eligendi expedita hic modi nemo.
+                        Her ses en illustration af mig selv der er lavet i forbindelse med en skole opgave. også lavet i adobe illustrator.
                     </p>
                 </div>
             </div>
